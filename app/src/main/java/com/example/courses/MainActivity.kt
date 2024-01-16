@@ -121,7 +121,6 @@ fun CourseCard(topic: Topic, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     CoursesTheme {
-        //CourseCard(course = Course(R.string.photography, 38, R.drawable.photography))
         CourseApp()
     }
 }
