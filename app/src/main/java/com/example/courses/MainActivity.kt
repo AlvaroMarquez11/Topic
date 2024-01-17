@@ -50,14 +50,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun TopicApp() {
-    CourseList(
+    TopicList(
         topicList = DataSource.topics,
         modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))
     )
 }
 
 @Composable
-fun CourseList(topicList: List<Topic>, modifier: Modifier = Modifier) {
+fun TopicList(topicList: List<Topic>, modifier: Modifier = Modifier) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small)),
