@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    CourseApp()
+                    TopicApp()
                 }
             }
         }
@@ -49,7 +49,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun CourseApp() {
+fun TopicApp() {
     CourseList(
         topicList = DataSource.topics,
         modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))
@@ -65,13 +65,13 @@ fun CourseList(topicList: List<Topic>, modifier: Modifier = Modifier) {
         modifier = modifier
     ) {
         items(topicList) {
-            CourseCard(topic = it)
+            TopicCard(topic = it)
         }
     }
 }
 
 @Composable
-fun CourseCard(topic: Topic, modifier: Modifier = Modifier) {
+fun TopicCard(topic: Topic, modifier: Modifier = Modifier) {
     Card(modifier = modifier) {
         Row {
             Column {
@@ -121,6 +121,6 @@ fun CourseCard(topic: Topic, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     CoursesTheme {
-        CourseApp()
+        TopicApp()
     }
 }
